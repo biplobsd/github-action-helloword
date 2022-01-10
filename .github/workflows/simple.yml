@@ -1,0 +1,19 @@
+name: This is the simple test
+
+on: [push, workflow_dispatch]
+
+jobs:
+  run_simple_helloworld:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: echo a text
+        run: echo "Hello World"
+      
+      - name: Run mulitline 
+        run: |
+          sudu apt update
+          sudo apt install neofetch
+          neofetch
+          python3 -V
+        
